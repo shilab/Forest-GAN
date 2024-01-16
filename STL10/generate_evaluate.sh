@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+CUDA_VISIBLE_DEVICES="1" python  generate_evaluate.py \
+-gen_bs 128 \
+-dis_bs 64 \
+--dataset cifar10 \
+--bottom_width 4 \
+--img_size 32 \
+--max_iter 50000 \
+--num_eval_imgs 50000 \
+--gen_model autogan_cifar10_a \
+--dis_model autogan_cifar10_a \
+--latent_dim 128 \
+--gf_dim 256 \
+--df_dim 128 \
+--g_spectral_norm False \
+--d_spectral_norm True \
+--g_lr 0.0003 \
+--d_lr 0.0003 \
+--beta1 0.0 \
+--beta2 0.9 \
+--init_type xavier_uniform_ \
+--n_critic 5 \
+--val_freq 20 \
+--exp_name autogan_cifar10_a \
+--num_disc 5 \
+--random_state 42 \
+--num_workers 0 \
+--loss hinge_loss \
+--num_disc 1 \
+--epoches 2000 \
+--start_epoch 0 \
+--log_dir autogan_cifar10_a_2023_11_05_15_55_06 \
+--load_path autogan_cifar10_a_2023_11_05_15_55_06 \
+--real_images_path  data/train_CIFAR10.npy  \
+--inception_path  Inception_Net
