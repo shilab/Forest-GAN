@@ -1,0 +1,1 @@
+Download the training dataset of STL-10 from this [link](https://drive.google.com/file/d/1KZn2_-DV0WLQIWeBOabltGDhWKtN3Vg5/view?usp=sharing).
